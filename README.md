@@ -1,41 +1,45 @@
-# Blood-Donation
-# Blood Donation Management System
+# 🩸 LifeFlow - Blood Donation Management System
 
 ## Overview
 
-The Blood Donation Management System is a web-based application designed to connect blood donors and recipients efficiently. It helps users find donors based on blood groups and maintain donor information in an organized manner.
+LifeFlow is a full-stack blood donation management platform that connects blood donors, recipients, and healthcare organizations. The system streamlines donor registration, blood requests, appointment scheduling, and donation tracking.
 
 ## Features
 
-* Donor Registration
-* Blood Group Search
-* Donor Database Management
-* User-Friendly Interface
-* Quick Access to Blood Availability
+- User Authentication
+- Donor Registration
+- Blood Request Management
+- Appointment Scheduling
+- Donation Tracking
+- Dashboard Analytics
+- Blood Availability Monitoring
 
 ## Tech Stack
 
-* HTML
-* CSS
-* JavaScript
-* MySQL (if used)
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- CSS
+
+### Backend
+- Spring Boot
+- Java
+- REST API
+
+### Database
+- MySQL
 
 ## Project Structure
 
-* index.html
-* style.css
-* script.js
-* database.sql
+backend/
+frontend/
+screenshots/
 
-## Future Enhancements
+## Installation
 
-* Email Notifications
-* Location-Based Search
-* Admin Dashboard
-* Real-Time Blood Availability Tracking
+### Backend
 
-## Author
-
-Raga Chandrika R
-B.Tech AI & Data Science
-SNS College of Engineering
+```bash
+cd backend
+mvn spring-boot:run
