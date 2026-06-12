@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #050508;
+  --color-bg-secondary: #09090e;
+  --color-bg-tertiary: #12121e;
+  
+  --color-primary: #ff3355;
+  --color-primary-hover: #e02244;
+  --color-primary-glow: rgba(255, 51, 85, 0.25);
+  
+  --color-secondary: #00f2fe;
+  --color-secondary-glow: rgba(0, 242, 254, 0.25);
+  
+  --color-accent-purple: #8b5cf6;
+  --color-accent-purple-glow: rgba(139, 92, 246, 0.25);
+  
+  --color-success: #10b981;
+  --color-success-glow: rgba(16, 185, 129, 0.25);
+  
+  --color-warning: #ff9100;
+  --color-warning-glow: rgba(255, 145, 0, 0.25);
+  
+  --color-text-main: #f5f5fa;
+  --color-text-muted: #9fa2c4;
+  --color-text-dim: #6c7093;
+  
+  --font-main: 'Outfit', 'Inter', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+:root {
+  --bg-primary: #050508;
+  --bg-secondary: #09090e;
+  --bg-tertiary: #12121e;
+  
+  --primary: #ff3355;
+  --primary-rgb: 255, 51, 85;
+  --primary-hover: #e02244;
+  --primary-glow: rgba(255, 51, 85, 0.25);
+  
+  --secondary: #00f2fe;
+  --secondary-glow: rgba(0, 242, 254, 0.25);
+  
+  --success: #10b981;
+  --success-glow: rgba(16, 185, 129, 0.25);
+  
+  --warning: #ff9100;
+  --warning-glow: rgba(255, 145, 0, 0.25);
+  
+  --text-main: #f5f5fa;
+  --text-muted: #9fa2c4;
+  --text-dim: #6c7093;
+  
+  --border-color: rgba(255, 255, 255, 0.06);
+  --border-glow: rgba(255, 51, 85, 0.15);
+  
+  --font-main: 'Outfit', 'Inter', sans-serif;
+  --border-radius-lg: 16px;
+  --border-radius-md: 10px;
+  --border-radius-sm: 6px;
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --shadow-primary: 0 0 20px 0 rgba(255, 51, 85, 0.15);
+}
+
+/* Custom Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.08) #050508;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #050508;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #12121e;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body {
+  background-color: #050508;
+  color: #f5f5fa;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Radial backglow background effect */
+.bg-glow-radial {
+  background-image: radial-gradient(circle at 50% -20%, rgba(255, 51, 85, 0.08) 0%, transparent 60%);
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(13, 13, 22, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+}
+
+.glass-panel-premium {
+  background: rgba(13, 13, 22, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.75),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-premium:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 50px -5px rgba(0, 0, 0, 0.8),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-glow-red {
+  background: rgba(13, 13, 22, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 51, 85, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 0 30px 0 rgba(255, 51, 85, 0.08),
+              0 10px 40px -10px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-glow-red:hover {
+  border-color: rgba(255, 51, 85, 0.3);
+  box-shadow: 0 0 35px 0 rgba(255, 51, 85, 0.15),
+              0 15px 50px -5px rgba(0, 0, 0, 0.8);
+}
+
+.glass-panel-glow-purple {
+  background: rgba(13, 13, 22, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 0 30px 0 rgba(139, 92, 246, 0.08),
+              0 10px 40px -10px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-glow-purple:hover {
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow: 0 0 35px 0 rgba(139, 92, 246, 0.18),
+              0 15px 50px -5px rgba(0, 0, 0, 0.8);
+}
+
+/* Text Gradient Utilities */
+.text-gradient-red {
+  background: linear-gradient(135deg, #ff3355 0%, #ff758f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #00f2fe 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-white {
+  background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fluid Wave Animation for Stock Levels */
+@keyframes fluid-wave {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Leaflet Dark Mode Map Overrides */
+.leaflet-container {
+  background-color: #09090e !important;
+  font-family: inherit;
+}
+
+.leaflet-user-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaflet-user-marker .user-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #00f2fe;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00f2fe;
+  z-index: 10;
+}
+
+.leaflet-user-marker .user-pulse {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(0, 242, 254, 0.4);
+  border-radius: 50%;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.3); opacity: 1; }
+  80%, 100% { transform: scale(1.5); opacity: 0; }
+}
+
+.leaflet-donor-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaflet-donor-marker .donor-marker-dot {
+  width: 28px;
+  height: 28px;
+  background-color: #ff3355;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 51, 85, 0.6);
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+}
+
+.leaflet-donor-marker:hover .donor-marker-dot {
+  transform: scale(1.15);
+  background-color: #e02244;
+  box-shadow: 0 0 20px rgba(255, 51, 85, 0.9);
+}
+
+.leaflet-donor-marker .donor-pulse-circle {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 1px dashed rgba(255, 51, 85, 0.4);
+  border-radius: 50%;
+  animation: spin 12s linear infinite;
+}
+
+/* Glowing route styles */
+.glowing-route-line-purple {
+  filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.8));
+  stroke-dasharray: 6, 8;
+  animation: dashmove 20s linear infinite;
+}
+
+.glowing-route-line-red {
+  filter: drop-shadow(0 0 5px rgba(255, 51, 85, 0.8));
+  stroke-dasharray: 6, 8;
+  animation: dashmove 20s linear infinite;
+}
+
+@keyframes dashmove {
+  to { stroke-dashoffset: -1000; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Shimmer Loading Skeleton */
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-swipe 1.6s infinite linear;
+}
+
+@keyframes shimmer-swipe {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Droplet Pulsing Animation */
+.droplet-pulse {
+  animation: float-pulse 3s ease-in-out infinite;
+}
+
+@keyframes float-pulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 51, 85, 0.4));
+  }
+  50% {
+    transform: translateY(-8px) scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(255, 51, 85, 0.8));
+  }
+}
